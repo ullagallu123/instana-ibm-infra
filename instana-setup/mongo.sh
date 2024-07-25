@@ -22,6 +22,11 @@ if [ "$(id -u)" -ne 0 ]; then
     exit 1
 fi
 
+# Install common utilities
+echo "Installing common utilities: git, net-tools, telnet" | tee -a "$LOG_FILE"
+sudo yum install -y git net-tools telnet | tee -a "$LOG_FILE"
+check_status "Installing common utilities"
+
 # Create MongoDB repo file if it does not exist
 if [ ! -f /etc/yum.repos.d/mongodb-org-7.0.repo ]; then
     cat <<EOL | tee /etc/yum.repos.d/mongodb-org-7.0.repo | tee -a "$LOG_FILE"

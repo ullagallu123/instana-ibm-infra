@@ -11,4 +11,4 @@
   - rabbitmq[Queue]
   - redis[cache]
 
-[Official Documentatation about instance](https://www.ibm.com/docs/en/instana-observability/current?topic=instana-building-custom-dashboards)
+[Official Documentatation about ibm-instana](https://www.ibm.com/docs/en/instana-observability/current?topic=instana-building-custom-dashboards)
